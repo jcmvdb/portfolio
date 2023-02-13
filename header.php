@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/style/css/style.css">
 </head>
 <body>
+<div id="background-image">
 <div id="wrapper">
 
     <?php
