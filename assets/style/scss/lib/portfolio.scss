@@ -1,0 +1,56 @@
+#portfolioWrapper {
+  h1 {
+    margin-left: 10px;
+  }
+  .projects {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    .project {
+      background-color: #e7e7e7;
+      box-shadow: 0 3px 8px rgba(100, 100, 100, 0.7);
+      border-radius: 12px;
+      flex: 0 0 calc(50% - 1rem);
+      margin: 0.5rem;
+      padding: 10px;
+      cursor: pointer;
+      .heading {
+        img {
+          height: 150px;
+          width: 100%;
+          overflow: hidden;
+          border-radius: 12px;
+          object-fit: cover;
+        }
+      }
+
+
+    //  project:hover
+      &:hover {
+        //background-color: green;
+        flex: 0 0 50%;
+        //margin: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: calc(0.25rem + 14px);
+        padding-right: calc(0.25rem + 14px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #portfolioWrapper {
+    .projects {
+      .project {
+        flex: 0 0 100%;
+
+        &:hover {
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+}
