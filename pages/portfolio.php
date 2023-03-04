@@ -7,7 +7,7 @@
 
         foreach ($data as $dataItem) {
             ?>
-            <div class="project">
+            <div class="project" onclick="projectDescription('<?= $dataItem['project_name'] ?>')">
                 <div class="heading">
                     <img src="../assets/img/<?= $dataItem["img"]; ?>" alt="">
                     <h1><?= $dataItem["project_name"]; ?></h1>

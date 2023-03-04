@@ -9,36 +9,36 @@
 
     <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="assets/style/css/style.css">
+
 </head>
 <body>
 <div id="background-image">
-<div id="wrapper">
+    <div id="wrapper">
 
-    <?php
-    if (!isset($_SESSION)) {
-        session_start();
-    }
-    ?>
+        <?php
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        ?>
 
-    <nav>
-        <div class="left">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/portfolio">portfolio</a></li>
-                <li><a href="/over-mij">over mij</a></li>
-            </ul>
-        </div>
-        <div class="right">
-            <ul>
+        <div class="topnav" id="myTopnav">
+
+                <a href="/home" class="first-child">Home</a>
+                <a href="/portfolio">Portfolio</a>
+                <a href="/over-mij">Over mij</a>
                 <?php
                 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-                    echo "<li><a href='/account'>account</a></li>";
-                    echo "<li><a href='/logout'>logout</a></li>";
+                    echo "<a href='/account'>account</a>";
+                    echo "<a href='/logout'>logout</a>";
                 } else {
-                    echo "<li><a href='/login'>login</a></li>";
-                    echo "<li><a href='/register'>register</a></li>";
+                    echo "<a href='/login'>login</a>";
+                    echo "<a href='/register'>register</a>";
                 }
                 ?>
-            </ul>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+<!--                    <i class="fa fa-bars">X</i>-->
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </a>
         </div>
-    </nav>
