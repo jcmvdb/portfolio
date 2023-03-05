@@ -1,10 +1,21 @@
 <?php
 // Include config file
 
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: /account");
-    exit;
-}
+require_once "loggincheck.php";
+
+//if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+//    header("location: /account");
+//    exit;
+//}
+
+/**
+ * Checks if all the information that is filled in, is correct
+ *
+ * Username: checks if the username has the right characters and is unique
+ * Firstname: checks if the first name has the right characters
+ * Lastname: checks if the last name has the right characters
+ * Password and Confirm password: checks if it has the correct characters and if it is the same
+ */
 
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = $firstname = $lastname = "";

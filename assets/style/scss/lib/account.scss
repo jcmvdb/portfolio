@@ -1,0 +1,11 @@
+#accountWrapper {
+  .content {
+    display: flex;
+    .left {
+      background-color: blue;
+    }
+    .right {
+      background-color: red;
+    }
+  }
+}

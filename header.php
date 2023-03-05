@@ -13,6 +13,7 @@
 </head>
 <body>
 <div id="background-image">
+    <div class="blur">
     <div id="wrapper">
 
         <?php
@@ -30,9 +31,6 @@
                 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                     echo "<a href='/account'>account</a>";
                     echo "<a href='/logout'>logout</a>";
-                } else {
-                    echo "<a href='/login'>login</a>";
-                    echo "<a href='/register'>register</a>";
                 }
                 ?>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">

@@ -1,0 +1,50 @@
+.LoginWrapper {
+  display: flex;
+  justify-content: center;
+  .loginForm {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 500px;
+    border-radius: 12px;
+
+    h1 {
+      margin: 25px;
+      text-align: center;
+    }
+
+    form {
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        label {
+          width: 80%;
+          margin-top: 15px;
+          margin-bottom: 5px;
+        }
+
+        input {
+          width: 80%;
+          margin: 5px 0;
+          border: 0;
+          height: 48px;
+          padding: 2.5px;
+          border-bottom: 1px solid #545454;
+          outline: none;
+          font-size: 24px;
+          background-color: transparent;
+
+          &[type="submit"] {
+            border-radius: 12px;
+            color: white;
+            //background: linear-gradient(to left, rgb(90, 196, 215), rgb(215, 17, 239));
+            background: grey;
+            border-bottom: 0;
+            margin-bottom: 25px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

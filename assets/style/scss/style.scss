@@ -1,6 +1,8 @@
 @import "lib/variables";
 @import "lib/nav";
 @import "lib/portfolio";
+@import "lib/account";
+@import "lib/login";
 
 * {
   padding: 0;
@@ -8,13 +10,20 @@
   box-sizing: border-box;
 }
 #background-image {
+  background-image: url("../../img/backgroundtest.webp");
   //background-image: url("../../img/background.webp");
-  //background-attachment: fixed;
-  //background-repeat: no-repeat;
-  //background-size: cover;
+  //background-image: url("../../img/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   //background-image: url("assets/img/background.webp");
-  height: 100vh;
-  width: 100vw;
+  //height: 100vh;
+  //width: 100vw;
+
+
+  .blur {
+    backdrop-filter: blur(3px);
+  }
 
   #wrapper {
     display: flex;
@@ -22,8 +31,12 @@
     margin: 0 auto;
     min-height: 100vh;
 
-    width: 1000px;
+    width: 1500px;
     max-width: 90vw;
+
+    .title {
+      color: $titleColor;
+    }
 
     .content {
       margin-top: 50px;
@@ -35,6 +48,17 @@
       min-height: 40px;
       justify-content: space-evenly;
       align-items: center;
+      color: $navbarColor;
+
+      a {
+        color: $navbarColor;
+        transition: 0.2s all ease-in-out;
+        text-decoration: none;
+
+        &:hover {
+          color: $navbarColorHover;
+        }
+      }
     }
   }
 }
